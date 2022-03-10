@@ -7,13 +7,14 @@
     <groupId>com.difisoft</groupId>
     <artifactId>market-model</artifactId>
     <version>1.0.0</version>
-    <url>https://github.com/difisoft/market-model.git</url>
+    <url>https://github.com/difisoft/maven-repos.git</url>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
         <dependency>
@@ -96,9 +97,9 @@
         </repository>
     </distributionManagement>
     <scm>
-        <url>https://github.com/difisoft/market-model.git</url>
-        <connection>scm:git@github.com:difisoft/market-model.git</connection>
-        <developerConnection>scm:git@github.com:difisoft/market-model.git</developerConnection>
+        <url>https://github.com/difisoft/maven-repos.git</url>
+        <connection>scm:git@github.com:difisoft/maven-repos.git</connection>
+        <developerConnection>scm:git@github.com:difisoft/maven-repos.git</developerConnection>
     </scm>
 
     <repositories>
