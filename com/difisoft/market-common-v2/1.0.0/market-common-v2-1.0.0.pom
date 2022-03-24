@@ -139,7 +139,7 @@
 
     <repositories>
         <repository>
-            <id>PROJECT-REPO-URL</id>
+            <id>github</id>
             <url>https://github.com/difisoft/maven-repos/main</url>
             <snapshots>
                 <enabled>true</enabled>
