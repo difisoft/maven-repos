@@ -138,13 +138,18 @@
     </scm>
 
     <repositories>
+        
         <repository>
             <id>github</id>
-            <url>https://github.com/difisoft/maven-repos/main</url>
+            <url>https://raw.githubusercontent.com/difisoft/maven-repos/main</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
         </repository>
     </repositories>
     <pluginRepositories>
