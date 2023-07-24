@@ -95,11 +95,22 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
+                <groupId>com.difisoft</groupId>
+                <artifactId>maven-common-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>difi-command-runner</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <commands>
+                        <command>linuxOnly:mvn exec:java -Dexec.mainClass="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"</command>
+                        <command>linuxOnly:mvn clean package</command>
+                        <!--<command>windowOnly:mvn exec:java -D"exec.mainClass"="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"</command>-->
+                    </commands>
                 </configuration>
             </plugin>
             <plugin>
