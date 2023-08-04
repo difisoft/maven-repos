@@ -118,8 +118,8 @@
 
     <repositories>
         <repository>
-            <id>PROJECT-REPO-URL</id>
-            <url>https://github.com/difisoft/maven-repos/main</url>
+            <id>github</id>
+            <url>https://raw.githubusercontent.com/difisoft/maven-repos/main</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
