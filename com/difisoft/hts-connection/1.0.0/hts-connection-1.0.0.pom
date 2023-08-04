@@ -33,23 +33,6 @@
             <artifactId>model-common</artifactId>
             <version>1.0.0</version>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>com.techx.tradex</groupId>-->
-<!--            <artifactId>tradex-common</artifactId>-->
-<!--            <version>1.0-SNAPSHOT</version>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <groupId>com.fasterxml.jackson.core</groupId>-->
-<!--                    <artifactId>jackson-databind</artifactId>-->
-<!--                </exclusion>-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.slf4j</groupId>-->
-<!--                    <artifactId>slf4j-api</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -107,7 +90,9 @@
                 </executions>
                 <configuration>
                     <commands>
-                        <command>linuxOnly:mvn exec:java -Dexec.mainClass="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"</command>
+                        <command>linuxOnly:mvn exec:java
+                            -Dexec.mainClass="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"
+                        </command>
                         <command>linuxOnly:mvn clean package</command>
                         <!--<command>windowOnly:mvn exec:java -D"exec.mainClass"="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"</command>-->
                     </commands>
@@ -167,15 +152,27 @@
 
     <repositories>
         <repository>
-            <id>PROJECT-REPO-URL</id>
-            <url>https://github.com/difisoft/maven-repos/main</url>
+            <id>difisoft</id>
+            <url>https://raw.githubusercontent.com/difisoft/maven-repos/main</url>
             <snapshots>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </snapshots>
         </repository>
+        <repository>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
     </repositories>
     <pluginRepositories>
+        <pluginRepository>
+            <id>difisoft</id>
+            <url>https://github.com/difisoft/maven-repos/main</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
     </pluginRepositories>
 
 </project>
