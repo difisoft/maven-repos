@@ -90,8 +90,7 @@
                 </executions>
                 <configuration>
                     <commands>
-                        <command>linuxOnly:mvn exec:java
-                            -Dexec.mainClass="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"
+                        <command>linuxOnly:mvn exec:java -Dexec.mainClass="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"
                         </command>
                         <command>linuxOnly:mvn clean package</command>
                         <!--<command>windowOnly:mvn exec:java -D"exec.mainClass"="com.difisoft.htsconnection.socket.message.receive.ClassRegistration"</command>-->
